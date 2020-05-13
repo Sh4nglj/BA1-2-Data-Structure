@@ -1,0 +1,4 @@
+﻿  BinTree.cpp
+F:\a.E盘-临时\数据结构\#8 BinTree\8 - BinTree\BinTree.cpp(11,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+F:\a.E盘-临时\数据结构\#8 BinTree\8 - BinTree\BinTree.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  8 - BinTree.vcxproj -> F:\a.E盘-临时\数据结构\#8 BinTree\8 - BinTree\Debug\8 - BinTree.exe
