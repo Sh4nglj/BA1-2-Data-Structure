@@ -1,7 +1,7 @@
 /*******************************************************************************
 * FileName:         myHash.cpp
-* Author:           Your_name
-* Student Number:   Student_Number
+* Author:           尚林杰
+* Student Number:   3019244115
 * Date:             2020/05/20 09:24:55
 * Version:          v1.0
 * Description:      Data Structure Experiment #15
@@ -37,7 +37,8 @@ MyHash::~MyHash(){
 
 void MyHash::setvalue(int key, int value){
    int rem = key % p;
-
+    
+    /* The first one */
    if (!data[rem].flag) {
        HashNode* newNode = new HashNode;
        newNode->numKey = key;
@@ -51,9 +52,11 @@ void MyHash::setvalue(int key, int value){
        while(temp->numKey != key && temp->next != nullptr) {
            temp = temp->next;
        }
+       /* Replace */
        if (temp->numKey == key) {
            temp->val = value;
        }
+       /* Add a new node */
        else {
             HashNode* newNode = new HashNode;
             newNode->numKey = key;
@@ -75,6 +78,7 @@ int MyHash::getvalue(int key){
         return -1;
     }
 
+    /* Search */
     HashNode* temp = data[rem].first;
     while (temp) {
         if (temp->numKey)
