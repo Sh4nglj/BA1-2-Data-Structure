@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile", // 这是项目执行名称，必须与launch.json的preLaunchTask相同
+            "command": "F:/Develop/MinGW64/bin/g++", // 指定编译器，我用的mingw64编译，安装目录我放在G盘，你需要根据自己的情况更改
+            "args":["${workspaceFolder}/*.cpp", "-o", "${workspaceFolder}/${workspaceFolderBasename}.exe","-g"], //这里的*.cpp是关键
+            // "args":["${workspaceFolder}\\*.cpp", "-o", "${file}.exe","-g"], //这里的*.cpp是关键
+            // args是编译指令的参数，注意"-o"后面的那个参数，指定了输出可执行文件的存放位置，这个参数必须与launch.json的program相同
+            "type": "shell", // process和shell，我用了shell，具体参见VSCode官方文档
+            "options": {
+                "cwd": "F:/Develop/MinGW64/bin"//指定编译器工作目录，和minGW配置的环境变量相同
+            },
+            "problemMatcher":["$gcc"], // (可选)用于捕捉编译时终端的报错信息
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }, 
+            "presentation": {
+                "echo": true,
+                "reveal": "always", // 执行任务时跳转到终端
+                "focus": false, // C/C++必须设为false
+                "panel": "shared", // 编译信息只使用一个终端面板
+            }
+        },
+
+        {
+            "label": "g++",
+            "command": "g++",
+            "args": ["-g","${file}","-o","${file}.exe"],    // ç¼–è¯‘å‘½ä»¤
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5,
+                }
+            }
+        }
+    ]
+}

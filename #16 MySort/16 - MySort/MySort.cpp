@@ -91,5 +91,27 @@ int MySort::partition(int* arr, int low, int high) {
 }
 
 void MySort::heapSort(int* arr, int len){
+    for (int i = len / 2 - 1; i >= 0; i--)
+        heapAdjust(arr, i, len);
+    
+    for (int i = len - 1; i >= 0; i--) {
+        int temp = arr[0];
+        arr[0] = arr[i];
+        arr[i] = temp;
+        heapAdjust(arr, 0, i);
+    }
+}
 
+void MySort::heapAdjust(int* arr, int s, int size) {
+    int temp = arr[s];
+    
+    for (int i = 2 * s + 1; i < size; i = 2 * i + 1) {
+        if (i < size - 1 && arr[i] < arr[i + 1])
+            i++;
+        if (temp >= arr[i])
+            break;
+        arr[s] = arr[i];
+        s = i;
+    }
+    arr[s] = temp;
 }

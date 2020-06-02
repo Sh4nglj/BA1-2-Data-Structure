@@ -13,6 +13,7 @@ private:
     // static void swap(int a, int b);
     static void Qsort(int* arr, int low, int high);
     static int partition(int* arr, int low, int high);
+    static void heapAdjust(int* arr, int s, int size);
 
 public:
     ~MySort(){}
