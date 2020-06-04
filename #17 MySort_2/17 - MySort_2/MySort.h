@@ -1,22 +1,11 @@
 /*******************************************************************************
 * FileName:         MySort.h
-* Author:           Your_name
-* Student Number:   Student_Number
+* Author:           尚林杰
+* Student Number:   3019244115
 * Date:             2020/06/03 09:24:55
 * Version:          v1.0
 * Description:      Data Structure Experiment #17
 *******************************************************************************/
-
-struct SLNode_static_link {
-    int value;
-    int next;
-};
-
-struct SLList_static_link {
-    int head;
-    int tail;
-    int num;
-};
 
 struct SLNode {
     int value;

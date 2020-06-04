@@ -1,7 +1,7 @@
 /*******************************************************************************
 * FileName:         MySort.cpp
-* Author:           Your_name
-* Student Number:   Student_Number
+* Author:           尚林杰
+* Student Number:   3019244115
 * Date:             2019/06/03 09:24:55
 * Version:          v1.0
 * Description:      Data Structure Experiment #17
