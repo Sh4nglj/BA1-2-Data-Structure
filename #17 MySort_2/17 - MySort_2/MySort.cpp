@@ -8,7 +8,6 @@
 *******************************************************************************/
 
 #include "MySort.h"
-#include "cmath"
 
 void mergeSort(int *arr, int n){
     int* tempList = new int[n];
